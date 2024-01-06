@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML Form</title>
+    <style>
+        div{
+            position: relative;
+            text-align: center;
+            border: 2px solid black;
+            padding: 3%;
+            margin: 2%;
+            height: 40%;
+            width: 20%;
+            margin-left: 35%;
+            box-shadow: 10px 10px;
+            background-color: beige;
+        }
+        #in1,#in2,#in3,#in4 {
+            height: 4%;
+            width:90%;
+        }
+        #bt1,#bt2{
+            height: 50%;
+            width:75%;
+            font-size: large;
+
+        }
+        #bt1{
+            background-color: lightgreen;
+        }
+        #bt2{
+            background-color: lightcoral;
+        }
+        input{
+            text-align: center;
+            font-size: 130%;
+            background-color: azure;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <img src="logo-blue.svg" style="height: 120%; width: 100%;">
+        <br><br>
+        <form action="insert.php" method="post">
+            <input id="in1" type="text" name="name" placeholder="Name">
+            <br><br>
+            <input id="in2" type="text" name="email" placeholder="Email">
+            <br><br>
+            <input id="in3" type="text" name="mobile" placeholder="Mobile">
+            <br><br>
+            <input id="in4" type="text" name="address" placeholder="Address">
+            <br><br><br>
+            <input id='bt1' type="submit" name="loginbutton" onclick="f2()">
+            <br><br>
+            <input id='bt2' type="reset" onClick="return confirm('Are you sure?')">
+        </form>
+    </div>
+    <script>
+    function f2()
+    {
+        var a=document.getElementById("in1")
+        var b=document.getElementById("in2")
+        var c=document.getElementById("in3")
+        var d=document.getElementById("in4")
+        alert("Form Submitted Successfully"+"\nYou have entered\nName: "+a.value+"\nEmail: "+b.value+"\nMobile: "+c.value+"\nAddress: "+d.value)
+    }
+    </script>
+</body>
+</html>
